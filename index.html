@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Options Check</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Options Check</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Options Checker</h1>
+        <p class="lead">Checks Options Chain History.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <form class="needs-validation">
+
+    <div class="form-row">
+
+      <div class="col-md-3 mb-3">
+        <label for="validationTooltip01">Company Ticker Symbol</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">$</span>
+          </div>
+          <input type="text" class="form-control" id="validationTooltip01" placeholder="Ticker Symbol" required>
+          <div class="invalid-tooltip">
+            Company Ticker Symbol not found.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label for="validationTooltip02">Strike</label>
+        <input type="text" class="form-control" id="validationTooltip02" placeholder="Strike" required>
+        <div class="invalid-tooltip">
+          Strike not found.
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label for="validationTooltipUsername">Option Type</label>
+        <div class="input-group">
+          <select class="custom-select" required>
+            <option value="" disabled selected>Call or Put</option>
+            <option value="C">Call</option>
+            <option value="P">Putt</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please choose a unique and valid username.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 mb-3">
+        <label for="validationTooltipUsername">Expiration Date v2</label>
+        <div class="input-group">
+          <select class="custom-select" required>
+            <option value="" disabled selected>Expiration Date</option>
+            <option value="">Date</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please pick a valid expiration date.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label for="validationTooltipUsername">Expiration Date</label>
+        <div class="input-group">
+          <select class="custom-select" required>
+            <option value="" disabled selected>Expiration Date</option>
+            <option value="">Date</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please pick a valid expiration date.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="btn btn-primary" type="submit">Check History</button>
+  </form>
+
+  
+  <footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Binh Nguyen 2020</div>
+            <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
