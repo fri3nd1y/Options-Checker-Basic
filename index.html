@@ -8,10 +8,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Options Check</title>
+  <title>Options Checker</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -20,7 +21,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Options Check</a>
+      <a class="navbar-brand" href="#">Options Checker</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -91,32 +92,21 @@
             <option value="P">Putt</option>
           </select>
           <div class="invalid-tooltip">
-            Please choose a unique and valid username.
+            Please pick either Call or Put.
           </div>
         </div>
       </div>
 
 
       <div class="col-md-3 mb-3">
-        <label for="validationTooltipUsername">Expiration Date v2</label>
+        <label class="control-label" for="date">Expiration Date</label>
         <div class="input-group">
-          <select class="custom-select" required>
-            <option value="" disabled selected>Expiration Date</option>
-            <option value="">Date</option>
-          </select>
-          <div class="invalid-tooltip">
-            Please pick a valid expiration date.
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+              <div class="sb-nav-link-icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+            </span>
           </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 mb-3">
-        <label for="validationTooltipUsername">Expiration Date</label>
-        <div class="input-group">
-          <select class="custom-select" required>
-            <option value="" disabled selected>Expiration Date</option>
-            <option value="">Date</option>
-          </select>
+          <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
           <div class="invalid-tooltip">
             Please pick a valid expiration date.
           </div>
@@ -145,6 +135,23 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+  <script>
+      $(document).ready(function(){
+          var date_input=$('input[name="date"]'); //our date input has the name "date"
+          var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+          date_input.datepicker({
+              format: 'mm/dd/yyyy',
+              container: container,
+              todayHighlight: true,
+              autoclose: true,
+          })
+      })
+  </script>
 
 </body>
 
